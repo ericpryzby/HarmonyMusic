@@ -1,0 +1,18 @@
+<!doctype html>
+
+<html>
+  <%= partial 'layouts/shared/_head' %>
+
+  <body class="<%= page_classes %>">
+    <header>
+      <%= partial 'components/_topbar' %>
+      <%= partial 'components/_salesbanner' %>
+      <%= partial 'components/_main-nav' %>
+    </header>
+    <main role="main">
+      <%= yield %>
+    </main>
+    <%= partial 'components/_footer' %>
+  </body>
+
+</html>

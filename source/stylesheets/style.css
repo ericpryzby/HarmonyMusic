@@ -1,0 +1,658 @@
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* ============ END OF CSS RESET =========== */
+
+
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #403D3C;
+  background-color: #FEFEFB;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Open Sans", sans-serif;
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: normal;
+  margin-bottom: 5px;
+}
+
+p {
+  font-size: 1em;
+  line-height: 1.5em;
+  font-weight: 100;
+}
+
+/* ================ GRID =================== */
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+}
+
+.container:before,
+.container:after {
+  content: " ";
+  display: table;
+}
+
+.container:after {
+  clear: both;
+}
+
+.one-half, .one-third, .two-thirds, .one-fourth {
+  width: 98%;
+  float: left;
+  position: relative;
+  min-height: 1px;
+  margin-left: 0%;
+  margin-right: 3%;
+  box-sizing: border-box;
+}
+
+/* For screen width size 768px to 991px the following occurs */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* For screen width size 992px to 1199px the following occurs */
+@media (min-width: 992px) {
+   .container {
+     width: 970px;
+   }
+   .one-half {
+     width:46%;
+   }
+   .one-third {
+     width: 31.33333%;
+   }
+   .two-thirds {
+    width: 65.66667%;
+   }
+   .one-fourth {
+     width:21%;
+   }
+   ul li.one-fourth:nth-child(even) {
+    padding: 20px 0 0 0;
+   }
+ }
+
+/* For screen width size 1200px and over the following occurs */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px; 
+    /* width: 974px; */
+  }
+}
+
+/*
+@media (min-width: 1600px) {
+  header .hero p {
+    font-size: 200%;
+  }
+}
+*/
+
+
+/*  SECTIONS  ============================================================================= */
+
+.section {
+  clear: both;
+  padding: 0px;
+  margin: 0px;
+}
+
+/*  GROUPING  ============================================================================= */
+
+.group:before,
+.group:after {
+    content:"";
+    display:table;
+}
+.group:after {
+    clear:both;
+}
+.group {
+    zoom:1; /* For IE 6/7 (trigger hasLayout) */
+}
+
+/*  GRID COLUMN SETUP   ==================================================================== */
+
+.col {
+  display: block;
+  float:left;
+  margin: 1% 0 1.5% 1.6%;
+}
+
+.col:first-child { margin-left: 0; } /* all browsers except IE6 and lower */
+
+/*  REMOVE MARGINS AS ALL GO FULL WIDTH AT 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+  .col { 
+    margin: 1% 0 1% 0%;
+  }
+}
+
+/*  GRID OF THREE   ============================================================================= */
+  
+.span_3_of_3 {
+  width: 100%; 
+}
+
+.span_2_of_3 {
+  width: 66.13%; 
+}
+
+.span_1_of_3 {
+  width: 32.26%; 
+}
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+  .span_3_of_3 {
+    width: 100%; 
+  }
+  .span_2_of_3 {
+    width: 100%; 
+  }
+  .span_1_of_3 {
+    width: 100%;
+  }
+}
+
+/*  GRID OF FOUR   ============================================================================= */
+
+.span_4_of_4 {
+  width: 100%;
+}
+.span_3_of_4 {
+  width: 74.6%;
+}
+.span_2_of_4 {
+  width: 49.2%;
+}
+.span_1_of_4 {
+  width: 23.8%;
+}
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 480px) {
+  .col {  margin: 1% 0 1% 0%; }
+  .span_1_of_4, .span_2_of_4, .span_3_of_4, .span_4_of_4 { width: 100%; }
+}
+
+/* ============== HEADER =============== */
+
+header {
+  color: #DCF0FA;
+  background: #1C1919;
+}
+
+header nav {
+  /* padding: 1em 0; */
+  padding: 15px 0;
+}
+
+header .main-nav ul {
+  display: inline;
+  text-align: right;
+  /* float: right; */
+  margin: 0;
+  padding: 7px 0px;
+}
+
+header .main-nav ul li {
+  padding-right: 16px;
+}
+
+header nav ul > li {
+  list-style-type: none;
+  display: inline-block;
+  margin: 0 15px;
+  font-weight: 300;
+}
+
+header .top-bar ul > li > a {
+  color: #DCF0FA;
+  text-decoration: none;
+  font-weight: 300;
+}
+
+header .main-nav ul > li > a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+header nav ul .fa {
+  font-size: 20px;
+}
+
+header .hero {
+  text-transform: uppercase;
+  color: #FFF;
+}
+
+header .hero h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 25px 0 0;
+}
+
+header .hero p {
+  font-size: 1em;
+  line-height: 1.5em;
+  font-weight: 300;
+  margin: 10px 0 25px;
+}
+
+header .hero a {
+  margin:10px 15px;
+  font-size: 1.5em;
+}
+
+header .hero img {
+  display: block;
+  margin: 3em auto 0;
+}
+
+header form input{
+  min-width: 300px;
+  height: 30px;
+  border-radius: 3px;
+  border: 1px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 300;
+  color: #bbb;
+  letter-spacing: .5px;
+  padding-left: 10px;
+}
+
+.sales-banner {
+  /* background: #403D3C; */
+  background: rgba(94,94,94,1);
+  background: -moz-linear-gradient(left, rgba(94,94,94,1) 0%, rgba(64,61,60,1) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(94,94,94,1)), color-stop(100%, rgba(64,61,60,1)));
+  background: -webkit-linear-gradient(left, rgba(94,94,94,1) 0%, rgba(64,61,60,1) 100%);
+  background: -o-linear-gradient(left, rgba(94,94,94,1) 0%, rgba(64,61,60,1) 100%);
+  background: -ms-linear-gradient(left, rgba(94,94,94,1) 0%, rgba(64,61,60,1) 100%);
+  background: linear-gradient(to right, rgba(94,94,94,1) 0%, rgba(64,61,60,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5e5e5e', endColorstr='#403d3c', GradientType=1 );
+}
+
+.top-bar {
+  color: #DCF0FA;
+}
+
+.top-bar-content-left {
+  display: inline-block;
+  float: left;
+  vertical-align: top;
+}
+
+.top-bar-content-left ul {
+  float: right;
+  margin-top: 9px;
+  padding-left: 20px;
+}
+
+.top-bar-content-right {
+  float: right;
+  text-align: right;
+}
+
+.top-bar-content-right ul {
+  float: right;
+  margin-top: 14px;
+}
+
+.sales-banner-content-left {
+  float: left;
+  text-align: left;
+}
+
+.sales-banner-content-right {
+  float: right;
+  text-align: right;
+  margin-top: 40px;
+}
+
+.main-nav {
+  color: #333;
+  background: #D3CBBD;
+}
+
+.main-nav .container div ul {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ============== MAIN CONTENT =============== */
+
+
+
+img {
+  max-width: 100%;
+  -webkit-box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.34);
+  -moz-box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.34);
+  box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.34);
+}
+
+.hero-mosaic {
+  margin: 40px 0px;
+}
+
+/* ========== BENEFITS =========== */
+
+.benefits {
+  margin: 0 auto;
+  padding: 2.9em 0 2em 0;
+  text-align: center;
+  display: block;
+  position: relative;
+  background: #E9E2D0;
+}
+
+.benefits ul li {
+  list-style-type: none;
+  display: inline-block;
+}
+
+.benefits i {
+  color: #456F74;
+  font-size: 60px;
+  margin: 0;
+  vertical-align: middle;
+}
+
+.benefits h2 {
+  color: #403D3C;
+}
+
+.span_1_of_4 p {
+  padding: 10px;
+  line-height: 1.5em;
+}
+
+.span_1_of_4 .fa {
+  margin-bottom: 10px;
+}
+
+/* =========== FEATURED ITEMS ============ */
+
+.featured-items-title {
+  margin-top: 25px;
+  margin-bottom: 5px;
+}
+
+hr {
+  border: 0;
+  height: 3px;
+  background: #333;
+  background-image: linear-gradient(to right, #ccc, #403D3C, #ccc);
+}
+
+.about p {
+  line-height: 1.5em;
+}
+
+.about {
+  margin-top: 25px;
+  margin-bottom: 30px;
+}
+
+/* =========== TESTIMONIAL ============ */
+
+.testimonial {
+  font-size: 1.1em;
+}
+
+.testimonial p {
+  padding-left: 50px;
+  padding-right: 40px;
+}
+
+.testimonial img {
+  margin-left: 50px;
+  margin-top: 10px;
+    max-width: 100%;
+  -webkit-box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.34);
+-moz-box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.34);
+box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.34);
+border-radius: 20px;
+
+}
+
+#avatar img {
+  float: left;
+}
+
+#avatar p {
+  /* font-weight: 700; */
+  font-size: .85em;
+  padding-top: 20px;
+  padding-left: 110px;
+}
+
+i {
+  font-style: italic;
+}
+
+#about-heading h2 {
+  margin-bottom: 15px;
+}
+
+/* =============== BUTTONS =================== */
+
+.btn {
+  border-radius: 4px;
+  color: #FFFFFF;
+  font-weight: 400;
+  text-decoration: none;
+  padding: 10px 110px;
+  background: #EB5937;
+  border: 2px solid #EF6520;
+  box-shadow: 0px 2px 0px #CA3A1B;
+}
+
+a .btn {
+  margin: 100px;
+}
+
+
+.btn:hover {
+  background: #EA7054;
+
+}
+
+ /* ================= FOOTER ====================== */
+
+
+ footer {
+   background-color: #1C1919;
+   color: #DCF0FA;
+   height: 150px;
+   position: relative;
+   overflow: hidden;
+   z-index: 0;
+ }
+
+ footer p, footer nav ul {
+   font-size: 14px;
+   font-weight: 100;
+   text-align: center;
+   margin: 10px auto 0;
+ }
+
+ footer ul {
+  margin-top: 18px;
+  /* margin-left: 150px */
+  text-align: right;
+ }
+
+ footer .fa {
+  color: #DCF0FA;
+  font-size: 36px;
+}
+
+ footer ul li {
+   list-style-type: none;
+   display: inline;
+ }
+
+ footer nav ul li a {
+   color: #DCF0FA;
+   text-decoration: none;
+ }
+
+ footer .right-footer-block {
+   width: 15%;
+ }
+
+ footer .left-footer-block {
+    width: 15%;
+ }
+
+  footer .middle-footer-block {
+    width: 58%;
+    padding-top: 2px;
+  }
+
+ footer .logo {
+   padding: 2.35em 0;
+   margin: 0 auto;
+   display: block;
+ }
+
+ @media (min-width: 992px) {
+   footer {
+     background-color: #1C1919;
+     height: 100px;
+   }
+
+   footer p, footer nav ul {
+     padding: 1.5em 0;
+     /* text-align: left; */
+   }
+
+   footer.right-footer-block {
+     background-color: #1C1919;
+   }
+
+   footer .logo {
+     padding: 2em 0 2em 1.5em;
+   }
+}
+
+@media (max-width: 415px) {
+  ul {
+    -webkit-padding-start: 0;
+    -moz-padding-start: 0;
+   }
+ }
+
+div.right-footer-block.one-third {
+  margin-right: 0px;
+  margin-left: 3%;
+}
+
+footer.one-third {
+  margin-bottom: 0px;
+}
+
+.right-footer-block ul > li {
+  display: inline-block;
+  float: right;
+  padding-top: 28px;
+  padding-left: 15px;
+}
+
+p.copyright-block {
+  padding-top: 17px;
+  text-align: left;
+  padding-left: 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
