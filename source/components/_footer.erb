@@ -1,28 +1,83 @@
-		<footer>
-			<div class="container footer-nav-block">
+<footer>
+	<div class="container footer-nav-block">
+		<div class="footer-content">
+			<nav id="footer-nav">
+				<ul>
+		      <li><a href="">About</a></li> |
+		      <li><a href="">Return Policy</a></li> |
+		      <li><a href="">Terms of Service</a></li> |
+		      <li><a href="">Financing Options</a></li> |
+		      <li><a href="">Shipping Details</a> |
+		      <li><a href="">Contact Support</a></li>
+		    </ul>
+		  </nav>
+		    <p class="copyright-block">&copy; 2015 <strong>Harmony Music Inc.</strong> | 
+		     	<span class="social-icons">
+		     		<a href="#"><i class="fa fa-google-plus"></i></a>
+		     		<a href="#"><i class="fa fa-twitter"></i></a>
+		     		<a href="#"><i class="fa fa-facebook-square"></i></a>
+		     	</span>
+		    </p>
+		 </div>
+	</div>
+</footer>
 
-			       <div class="col span_1_of_4">
-			         <p class="copyright-block">&copy; 2015 <strong>Harmony Music</strong></p>
-			       </div>
-
-			       <nav class="col span_2_of_4">
-			         <ul>
-			           <li><a href="">About</a></li> |
-			           <li><a href="">Return Policy</a></li> |
-			           <li><a href="">Terms of Service</a></li> |
-			           <li><a href="">Financing</a></li> |
-			           <li><a href="">Shipping Details</a> |
-			           	<li><a href="">Contact</a></li>
-			         </ul>
-			       </nav>
-
-			       <div class="col span_1_of_4">
-						<ul>
-							<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-							<li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
-						</ul>
-			       </div>
-
+<!-- Left Vertical Slider Panel -->
+<div class="cd-panel from-right">
+	<header class="cd-panel-header">
+		<h1>Menu</h1>
+		<a href="#0" class="cd-panel-close">X</a>
+	</header>
+<div class="cd-panel-container">
+	<div class="cd-panel-content">
+		<div class="row">
+			<!-- Menu Left -->
+			<div class="six columns">
+			  <ul class="main-menu">
+			    <li>
+			     <h4 class="sub-menu">Woodwinds <i class="fa fa-chevron-down closed"></i></h4>
+	          <ul class="closed">
+	            <a href="#"><li>Saxophones</li></a>
+	            <a href="#"><li>Clarinets</li></a>
+	            <a href="#"><li>Flutes & Piccolos</li></a>
+	            <a href="#"><li>Bassoons</li></a>
+	            <a href="#"><li>Oboes</li></a>
+	            <a href="#"><li>Recorders</li></a>
+	          </ul>
+			    </li>
+			    <li>
+			    <h4 class="sub-menu">Woodwind Accessories <i class="fa fa-chevron-down closed"></i></h4>
+	          <ul class="closed">
+	            <a href="#"><li>Mouthpieces</li></a>
+	            <a href="#"><li>Straps & Supports</li></a>
+	            <a href="#"><li>Instrument Stands</li></a>
+	            <a href="#"><li>Reeds</li></a>
+	            <a href="#"><li>Cleaning & Repair Kits</li></a>
+	            <a href="#"><li>Cases & Gig Bags</li></a>
+	          </ul>
+			    </li>
+			    <li>
+			    <h4 class="sub-menu">Top Brands & Staff Picks <i class="fa fa-chevron-down closed"></i></h4>
+	          <ul>
+	            <a href="#"><li>New & Featured</li></a>
+	            <a href="#"><li>Used & Vintage</li></a>
+	            <a href="#"><li>Artist Endorsed</li></a>
+	            <a href="#"><li>Selmer Paris</li></a>
+	            <a href="#"><li>Buffet Crampon</li></a>
+	            <a href="#"><li>Yamaha</li></a>
+	          </ul>
+			    </li>
+			  </ul>
 			</div>
-		</footer>
+		</div> <!-- cd-panel-content -->
+	</div> <!-- cd-panel-container -->
+</div> <!-- cd-panel -->
+<!-- Javascript -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<%= javascript_include_tag "main.js" %>
+<%= javascript_include_tag "cbpHorizontalMenu.min.js" %>
+<script>
+	$(function() {
+		cbpHorizontalMenu.init();
+	});
+</script>

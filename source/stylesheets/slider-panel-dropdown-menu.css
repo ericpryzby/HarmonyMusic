@@ -1,0 +1,128 @@
+.row {
+  zoom: 1;
+  /* For IE 6/7 (trigger hasLayout) */
+}
+
+.row:before,
+.row:after {
+  content: "";
+  display: table;
+}
+
+.row:after {
+  clear: both;
+}
+
+.columns {
+  float: left;
+  display: block;
+  margin-left: 1.5%;
+  margin-bottom: 18px;
+  vertical-align: top;
+}
+
+.columns:first-child {
+  margin-left: 0;
+}
+
+.columns.six {
+  width: 100%;
+}
+
+.main-menu-icon {
+  float: right;
+  font-size: 38px;
+  cursor: pointer;
+}
+
+/* Off Screen Nav */
+section.offscreen-menu {
+  background: #456F74;
+  background: rgba(0, 79, 143, 0.9);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  padding-top: 100px;
+  top: 0;
+  left: 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-overflow-scrolling: touch;
+  -webkit-transform: translate(0, -150%);
+  transform: translate(0, -150%);
+  transition: all 1s;
+  z-index: 500;
+}
+
+section.offscreen-menu.open {
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+/*Menu Options */
+h4 {
+  padding: 0;
+  transition: all 1s;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+h4.submenu-open {
+  background: rgba(69, 111, 116, .3);
+  padding: 10px;
+}
+
+ul.main-menu {
+  position: relative;
+}
+
+ul.main-menu li,
+ul.site-options li {
+  margin: 20px 0;
+  font-weight: 300;
+  font-size: 16px;
+  padding-left: 20px;
+  font-size: 14px;
+}
+
+ul.main-menu li ul {
+  color: #403D3C;
+  display: none;
+  position: relative;
+  max-height: 1000px;
+  /*fallback for FireFox */
+  height: 100%;
+}
+
+ul.main-menu li ul.open {
+  display: block;
+
+}
+
+ul.main-menu li i {
+  transition: all 0.5s;
+  position: absolute;
+  right: 10px;
+}
+
+ul.main-menu li i.closed {
+  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+}
+
+ul.main-menu li i.open {
+  transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+}
+
+@media screen and (max-width: 550px) {
+  .columns.six {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
