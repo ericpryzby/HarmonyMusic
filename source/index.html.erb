@@ -7,7 +7,9 @@ title: Welcome to Middleman
     <div class="hero-mosaic">
       <div class="section group">
         <div class="col span_2_of_3">
-          <img src="images/AmazingDeals.jpg">
+          <% link_to '/sale-items.html' do %>
+            <%= image_tag 'AmazingDeals.jpg' %>
+          <% end %>
         </div>
         <div class="col span_1_of_3">
           <img src="images/spotlight.jpg">
@@ -75,7 +77,9 @@ title: Welcome to Middleman
 <section class="featured-items-mosaic">
   <div class="container">
       <li class="col span_1_of_4">
-        <img src="images/AltoSaxophone.jpg">
+      <% link_to '/item-detail.html' do %>
+        <%= image_tag 'SelmerReference54-262.jpg' %>
+      <% end %>
       </li>
       <li class="col span_1_of_4">
         <img src="images/mark6baritone.jpg">

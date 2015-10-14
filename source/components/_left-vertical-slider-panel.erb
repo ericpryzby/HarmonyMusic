@@ -1,0 +1,68 @@
+
+<!-- Left Vertical Slider Panel -->
+<div class="cd-panel from-right">
+	<header class="cd-panel-header">
+		<h1>Menu</h1>
+		<a href="#0" class="cd-panel-close">X</a>
+	</header>
+	<div class="cd-panel-container">
+		<div class="cd-panel-content">
+			<div class="accordion-menu2">
+				<ul id="accordion2" class="accordion2">
+					<li>
+				    <div class="link2">Account Info</div>
+				  </li>
+				  <li>
+				    <div class="link2">News & Reviews</div>
+				  </li>
+				  <li>
+				    <div class="link2">Shopping Cart<i class="fa fa-shopping-cart"></i></div>
+				  </li>
+				  <li>
+				    <div class="link2">Woodwinds<i class="fa fa-chevron-down"></i></div>
+				    <ul class="submenu">
+				      <!-- <li><a href="#">Saxophones</a></li> -->
+				      <li><%= link_to 'Saxophones', '/saxophones.html' %></li>
+				      <li><a href="#">Clarinets</a></li>
+				      <li><a href="#">Flutes & Piccolos</a></li>
+				      <li><a href="#">Bassoons</a></li>
+				      <li><a href="#">Oboes</a></li>
+				      <li><a href="#">Recorders</a></li>
+				    </ul>
+				  </li>
+				  <li>
+				    <div class="link2">Accessories<i class="fa fa-chevron-down"></i></div>
+				    <ul class="submenu">
+				      <li><a href="#">Mouthpieces</a></li>
+				      <li><a href="#">Straps & Supports</a></li>
+				      <li><a href="#">Instrument Stands</a></li>
+				      <li><a href="#">Reeds</a></li>
+				      <li><a href="#">Cleaning & Repair Kits</a></li>
+				      <li><a href="#">Cases & Gig Bags</a></li>
+				    </ul>
+				  </li>
+				  <li>
+				    <div class="link2">Staff Selections<i class="fa fa-chevron-down"></i></div>
+				    <ul class="submenu">
+				      <li><a href="#">New & Featured</a></li>
+				      <li><a href="#">Used & Vintage</a></li>
+				      <li><a href="#">Artist Endorsed</a></li>
+				      <li><a href="#">Selmer Paris</a></li>
+				      <li><a href="#">Buffet Crampon</a></li>
+				      <li><a href="#">Yamaha</a></li>
+				    </ul>
+				  </li>
+				</ul>
+			</div> <!-- accordion-menu2 -->
+		</div> <!-- cd-panel-content -->
+	</div> <!-- cd-panel-container -->
+</div> <!-- cd-panel -->
+<!-- Javascript -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<%= javascript_include_tag "main.js" %>
+<%= javascript_include_tag "cbpHorizontalMenu.min.js" %>
+<script>
+	$(function() {
+		cbpHorizontalMenu.init();
+	});
+</script>

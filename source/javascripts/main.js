@@ -17,7 +17,7 @@ $('.sub-menu').click(function() {
   $(this).parent().toggleClass('submenu-open').children('ul').slideToggle(500).end().siblings('.submenu-open').removeClass('submenu-open').children('ul').slideUp(500);
 $('html, body').animate({
             scrollTop: (0),
-        }, "fast"); /*this will scroll upto the top, not sure if I want to use this yet */
+        }, "fast"); 
 });
 
 /**
@@ -73,3 +73,49 @@ var cbpHorizontalMenu = (function() {
 	return { init : init };
 
 })();
+
+/* Accordion Menu */
+
+$(function() {
+	var Accordion = function(el, multiple) {
+		this.el = el || {};
+		this.multiple = multiple || false;
+		var links = this.el.find('.link');
+		links.on('click', {el: this.el, multiple: this.multiple}, this.dropdown)
+	}
+
+	Accordion.prototype.dropdown = function(e) {
+		var $el = e.data.el;
+			$this = $(this),
+			$next = $this.next();
+		$next.slideToggle();
+		$this.parent().toggleClass('open');
+		if (!e.data.multiple) {
+			$el.find('.submenu').not($next).slideUp().parent().removeClass('open');
+		};
+	}	
+
+	var accordion = new Accordion($('#accordion'), false);
+});
+
+$(function() {
+	var Accordion = function(el, multiple) {
+		this.el = el || {};
+		this.multiple = multiple || false;
+		var links = this.el.find('.link2');
+		links.on('click', {el: this.el, multiple: this.multiple}, this.dropdown)
+	}
+
+	Accordion.prototype.dropdown = function(e) {
+		var $el = e.data.el;
+			$this = $(this),
+			$next = $this.next();
+		$next.slideToggle();
+		$this.parent().toggleClass('open');
+		if (!e.data.multiple) {
+			$el.find('.submenu').not($next).slideUp().parent().removeClass('open');
+		};
+	}	
+
+	var accordion = new Accordion($('#accordion2'), false);
+});
